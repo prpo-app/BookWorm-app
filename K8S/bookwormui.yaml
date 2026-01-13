@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookwormui
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bookwormui
+  template:
+    metadata:
+      labels:
+        app: bookwormui
+    spec:
+      containers:
+        - name: bookwormui
+          image: katja1619/bookwormui:v1.0.1
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookwormui
+spec:
+  selector:
+    app: bookwormui
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP

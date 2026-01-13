@@ -1,0 +1,44 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-controller
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: bookwormui
+                port:
+                  number: 80
+          - path: /swagger
+            pathType: Prefix
+            backend:
+              service:
+                name: libraryservice
+                port:
+                  number: 80
+          - path: /book
+            pathType: Prefix
+            backend:
+              service:
+                name: bookservice
+                port:
+                  number: 80
+          - path: /library
+            pathType: Prefix
+            backend:
+              service:
+                name: libraryservice
+                port:
+                  number: 80
+          - path: /user
+            pathType: Prefix
+            backend:
+              service:
+                name: userservice
+                port:
+                  number: 80
