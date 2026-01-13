@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-controller
 spec:
-  ingressClassName: nginx
+  ingressClassName: webapprouting.kubernetes.azure.com
   rules:
     - http:
         paths:
@@ -42,3 +42,4 @@ spec:
                 name: userservice
                 port:
                   number: 80
+
