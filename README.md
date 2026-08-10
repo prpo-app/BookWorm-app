@@ -1,13 +1,5 @@
 # 📚 BookWorm
 
-## 🧾 Osnovni podatki o projektu
-
-- **Naslov projekta:** BookWorm  
-- **Skupina:** Samostojno 19  
-- **Ime skupine:** BookWorm  
-- **Član skupine:** Katja Vencelj  
-- **GitHub:** https://github.com/orgs/prpo-app/repositories
-
 ---
 
 ## 📖 Opis projekta
